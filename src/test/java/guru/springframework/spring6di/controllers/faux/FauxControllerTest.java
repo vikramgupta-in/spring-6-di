@@ -1,4 +1,4 @@
-package guru.springframework.spring6di.controllers.i18n;
+package guru.springframework.spring6di.controllers.faux;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,14 +7,15 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ActiveProfiles("EN")
+@ActiveProfiles({"qa","EN"})
 @SpringBootTest
-class Myi18NControllerTestEN {
+class FauxControllerTest {
 
     @Autowired
-    private Myi18NController myi18NController;
+    private FauxController fauxController;
     @Test
-    void sayHello() {
-     System.out.println(myi18NController.sayHello());
+    void getSource() {
+        System.out.println(fauxController.getSource());
     }
+
 }
